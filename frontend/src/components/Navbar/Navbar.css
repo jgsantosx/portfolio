@@ -7,8 +7,7 @@
   background: rgba(11, 17, 32, 0.85);
   backdrop-filter: blur(12px);
 
-  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
   z-index: 1000;
 }
 
@@ -27,16 +26,13 @@
 
 .navbar__links {
   display: flex;
-  align-items: center;
   gap: 2rem;
 }
 
 .navbar__links a {
   color: #94a3b8;
-
   font-size: 0.95rem;
   font-weight: 500;
-
   transition: color 0.2s ease;
 }
 
