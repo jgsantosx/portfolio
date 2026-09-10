@@ -5,7 +5,7 @@ export function Navbar() {
     <header className="navbar">
       <div className="container navbar__content">
         <a href="#home" className="navbar__logo">
-          Seu Nome
+          João Gabriel
         </a>
 
         <nav>
