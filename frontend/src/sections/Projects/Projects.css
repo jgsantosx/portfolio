@@ -1,0 +1,165 @@
+.projects {
+  border-top: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.projects__heading {
+  max-width: 760px;
+  margin-bottom: 4rem;
+}
+
+.projects__eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+
+  color: #38bdf8;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.projects__title {
+  margin-bottom: 1.5rem;
+
+  color: #f8fafc;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.15;
+}
+
+.projects__description {
+  max-width: 650px;
+
+  color: #94a3b8;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 430px;
+
+  padding: 2rem;
+
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+
+  background: rgba(15, 23, 42, 0.45);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(56, 189, 248, 0.45);
+}
+
+.project-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 2rem;
+}
+
+.project-card__type {
+  color: #38bdf8;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.project-card__number {
+  color: #475569;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-card h3 {
+  margin-bottom: 1rem;
+
+  color: #f8fafc;
+
+  font-size: 1.45rem;
+}
+
+.project-card__description {
+  margin-bottom: 1.5rem;
+
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.project-card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+
+  margin-bottom: 2rem;
+}
+
+.project-card__stack li {
+  padding: 0.45rem 0.75rem;
+
+  border: 1px solid #334155;
+  border-radius: 999px;
+
+  color: #cbd5e1;
+
+  font-size: 0.8rem;
+}
+
+.project-card__actions {
+  display: flex;
+  gap: 1.5rem;
+
+  margin-top: auto;
+}
+
+.project-card__actions a {
+  color: #cbd5e1;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.project-card__actions a:hover {
+  color: #38bdf8;
+}
+
+@media (max-width: 1000px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+}
