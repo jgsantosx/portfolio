@@ -13,6 +13,7 @@
 
 .about__eyebrow {
   display: inline-block;
+
   margin-bottom: 1rem;
 
   color: #38bdf8;
@@ -34,12 +35,14 @@
 .about__body {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
-  gap: 4rem;
   align-items: start;
+
+  gap: 4rem;
 }
 
 .about__text {
   display: grid;
+
   gap: 1.5rem;
 }
 
@@ -52,11 +55,13 @@
 
 .about__highlights {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
   gap: 1rem;
 }
 
 .about__card {
+  min-width: 0;
   min-height: 220px;
 
   padding: 1.5rem;
@@ -73,6 +78,7 @@
 
 .about__card:hover {
   transform: translateY(-4px);
+
   border-color: rgba(56, 189, 248, 0.45);
 }
 
@@ -102,18 +108,73 @@
   line-height: 1.7;
 }
 
+/* Tablet */
+
 @media (max-width: 1000px) {
+  .about__content {
+    gap: 3rem;
+  }
+
   .about__body {
     grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+  .about__highlights {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
+/* Tablet pequeno / Mobile */
+
 @media (max-width: 768px) {
+  .about__content {
+    gap: 2.5rem;
+  }
+
+  .about__body {
+    gap: 2.5rem;
+  }
+
+  .about__title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .about__text p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
   .about__highlights {
     grid-template-columns: 1fr;
   }
 
   .about__card {
     min-height: auto;
+  }
+
+  .about__card span {
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* Mobile pequeno */
+
+@media (max-width: 480px) {
+  .about__content {
+    gap: 2rem;
+  }
+
+  .about__body {
+    gap: 2rem;
+  }
+
+  .about__title {
+    font-size: 2rem;
+  }
+
+  .about__card {
+    padding: 1.25rem;
   }
 }

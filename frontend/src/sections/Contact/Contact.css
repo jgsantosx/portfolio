@@ -13,6 +13,7 @@
 
 .contact__eyebrow {
   display: inline-block;
+
   margin-bottom: 1rem;
 
   color: #38bdf8;
@@ -45,15 +46,20 @@
 .contact__grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
+
   gap: 2rem;
 }
 
 .contact__info {
   display: grid;
   gap: 1rem;
+
+  min-width: 0;
 }
 
 .contact__item {
+  min-width: 0;
+
   padding: 1.5rem;
 
   border: 1px solid #1e293b;
@@ -81,6 +87,9 @@
 
   font-size: 0.95rem;
 
+  overflow-wrap: anywhere;
+  word-break: break-word;
+
   transition: color 0.2s ease;
 }
 
@@ -89,6 +98,8 @@
 }
 
 .contact__cta {
+  min-width: 0;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,12 +109,11 @@
   border: 1px solid rgba(56, 189, 248, 0.2);
   border-radius: 20px;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(56, 189, 248, 0.08),
-      rgba(15, 23, 42, 0.45)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(56, 189, 248, 0.08),
+    rgba(15, 23, 42, 0.45)
+  );
 }
 
 .contact__cta h3 {
@@ -153,12 +163,59 @@
   background: #7dd3fc;
 }
 
+/* Tablet */
+
 @media (max-width: 800px) {
+  .contact__content {
+    gap: 3rem;
+  }
+
   .contact__grid {
     grid-template-columns: 1fr;
   }
 
+  .contact__title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .contact__description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
   .contact__cta {
     padding: 2rem;
+  }
+}
+
+/* Mobile pequeno */
+
+@media (max-width: 480px) {
+  .contact__content {
+    gap: 2.5rem;
+  }
+
+  .contact__title {
+    font-size: 2rem;
+  }
+
+  .contact__item {
+    padding: 1.25rem;
+  }
+
+  .contact__cta {
+    padding: 1.5rem;
+  }
+
+  .contact__cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact__cta p {
+    line-height: 1.7;
+  }
+
+  .contact__button {
+    width: 100%;
   }
 }

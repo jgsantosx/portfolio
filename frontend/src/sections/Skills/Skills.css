@@ -4,11 +4,13 @@
 
 .skills__heading {
   max-width: 760px;
+
   margin-bottom: 4rem;
 }
 
 .skills__eyebrow {
   display: inline-block;
+
   margin-bottom: 1rem;
 
   color: #38bdf8;
@@ -40,11 +42,14 @@
 
 .skills__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
   gap: 1.5rem;
 }
 
 .skills__card {
+  min-width: 0;
+
   padding: 2rem;
 
   border: 1px solid #1e293b;
@@ -74,10 +79,13 @@
 .skills__list {
   display: flex;
   flex-wrap: wrap;
+
   gap: 0.75rem;
 }
 
 .skills__list li {
+  max-width: 100%;
+
   padding: 0.6rem 0.9rem;
 
   border: 1px solid #334155;
@@ -88,6 +96,8 @@
   color: #cbd5e1;
 
   font-size: 0.9rem;
+
+  overflow-wrap: anywhere;
 
   transition:
     color 0.2s ease,
@@ -103,16 +113,61 @@
   background: rgba(56, 189, 248, 0.06);
 }
 
+/* Tablet */
+
+@media (max-width: 900px) {
+  .skills__heading {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Mobile */
+
 @media (max-width: 768px) {
   .skills__grid {
     grid-template-columns: 1fr;
   }
 
-  .skills__heading {
-    margin-bottom: 3rem;
+  .skills__title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .skills__description {
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   .skills__card {
     padding: 1.5rem;
+  }
+}
+
+/* Mobile pequeno */
+
+@media (max-width: 480px) {
+  .skills__heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .skills__title {
+    font-size: 2rem;
+  }
+
+  .skills__card {
+    padding: 1.25rem;
+  }
+
+  .skills__card h3 {
+    margin-bottom: 1.25rem;
+  }
+
+  .skills__list {
+    gap: 0.6rem;
+  }
+
+  .skills__list li {
+    padding: 0.5rem 0.75rem;
+
+    font-size: 0.85rem;
   }
 }
