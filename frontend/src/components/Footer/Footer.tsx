@@ -6,13 +6,13 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="container footer__content">
-        <p>
-          © {currentYear} Seu Nome. Todos os direitos reservados.
+        <p className="footer__copyright">
+          © {currentYear} JOÃO GABRIEL | DESENVOLVIDO EM GOTHAM.
         </p>
 
         <div className="footer__links">
           <a
-            href="https://github.com/"
+            href="https://github.com/Jgsantosx"
             target="_blank"
             rel="noreferrer"
           >
@@ -20,7 +20,7 @@ export function Footer() {
           </a>
 
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/jgsantosx/"
             target="_blank"
             rel="noreferrer"
           >
