@@ -1,45 +1,37 @@
 import "./Skills.css";
 
-const skillGroups = [
+const skills = [
   {
-    title: "Frontend",
-    skills: [
-      "React",
-      "TypeScript",
-      "JavaScript",
-      "HTML",
-      "CSS",
-      "Vite",
-      "Responsive Design",
-    ],
+    name: "Python",
+    level: 85,
   },
   {
-    title: "Backend",
-    skills: [
-      "Node.js",
-      "Express",
-      "REST APIs",
-      "JWT",
-      "Zod",
-    ],
+    name: "PostgreSQL",
+    level: 80,
   },
   {
-    title: "Banco de Dados",
-    skills: [
-      "PostgreSQL",
-      "Prisma",
-      "SQL",
-    ],
+    name: "Docker",
+    level: 75,
   },
   {
-    title: "Ferramentas",
-    skills: [
-      "Git",
-      "GitHub",
-      "Docker",
-      "VS Code",
-      "Postman",
-    ],
+    name: "WSL2",
+    level: 80,
+  },
+  {
+    name: "Android",
+    level: 65,
+  },
+  {
+    name: "Power Automate",
+    level: 75,
+  },
+  {
+    name: "Selenium",
+    level: 70,
+  },
+  {
+    name: "SQL",
+    level: 85,
   },
 ];
 
@@ -48,29 +40,41 @@ export function Skills() {
     <section className="skills section" id="skills">
       <div className="container">
         <div className="skills__heading">
-          <span className="skills__eyebrow">Skills</span>
+          <span className="skills__eyebrow">
+            STACK
+          </span>
 
           <h2 className="skills__title">
-            Tecnologias que utilizo no desenvolvimento de aplicações.
+            HABILIDADES PRINCIPAIS
           </h2>
 
           <p className="skills__description">
-            Minha stack cobre desde a construção da interface até APIs,
-            bancos de dados e ferramentas utilizadas no fluxo de
-            desenvolvimento.
+            Tecnologias e ferramentas que utilizo para desenvolver,
+            automatizar e estruturar soluções.
           </p>
         </div>
 
         <div className="skills__grid">
-          {skillGroups.map((group) => (
-            <article className="skills__card" key={group.title}>
-              <h3>{group.title}</h3>
+          {skills.map((skill) => (
+            <article className="skill-card" key={skill.name}>
+              <div className="skill-card__icon">
+                <span>
+                  {skill.name.charAt(0)}
+                </span>
+              </div>
 
-              <ul className="skills__list">
-                {group.skills.map((skill) => (
-                  <li key={skill}>{skill}</li>
-                ))}
-              </ul>
+              <h3>{skill.name}</h3>
+
+              <div className="skill-card__progress">
+                <div
+                  className="skill-card__progress-bar"
+                  style={{ width: `${skill.level}%` }}
+                />
+              </div>
+
+              <span className="skill-card__level">
+                {skill.level}%
+              </span>
             </article>
           ))}
         </div>
