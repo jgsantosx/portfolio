@@ -3,30 +3,27 @@ import "./Hero.css";
 export function Hero() {
   return (
     <section className="hero" id="home">
+      <div className="hero__overlay" />
+
       <div className="container hero__content">
         <div className="hero__text">
-          <span className="hero__eyebrow">Olá, eu sou</span>
+          <span className="hero__eyebrow">
+            CRIANDO SOLUÇÕES ROBUSTAS.
+          </span>
 
           <h1 className="hero__title">
-            João Gabriel
+            <span>JOÃO GABRIEL.</span>
+            <span>DESENVOLVEDOR FULL STACK.</span>
           </h1>
 
-          <h2 className="hero__subtitle">
-            Desenvolvedor Full Stack
-          </h2>
-
           <p className="hero__description">
-            Desenvolvo aplicações web completas, criando experiências
-            modernas no frontend e soluções robustas no backend.
+            Desenvolvimento de sistemas escaláveis, banco de dados e
+            automação de processos com precisão.
           </p>
 
           <div className="hero__actions">
-            <a href="#projects" className="hero__button hero__button--primary">
-              Ver projetos
-            </a>
-
-            <a href="#contact" className="hero__button hero__button--secondary">
-              Entrar em contato
+            <a href="#projects" className="hero__button">
+              VER PROJETOS
             </a>
           </div>
 
@@ -49,18 +46,10 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="hero__visual">
-          <div className="hero__card">
-            <span>Full Stack Developer</span>
+        <div className="hero__scroll">
+          <span>SCROLL</span>
 
-            <strong>
-              React
-              <br />
-              Node.js
-              <br />
-              TypeScript
-            </strong>
-          </div>
+          <div className="hero__scroll-line" />
         </div>
       </div>
     </section>
