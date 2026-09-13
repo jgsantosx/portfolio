@@ -2,30 +2,30 @@ import "./Projects.css";
 
 const projects = [
   {
-    title: "E-commerce Full Stack",
+    title: "Sistema de Inventário Doméstico",
     description:
-      "Aplicação completa de e-commerce com catálogo de produtos, autenticação, carrinho e integração com backend.",
-    stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-    type: "Full Stack",
-    github: "https://github.com/",
+      "Plataforma para controle de itens, organização de dados e visualização de informações de forma centralizada.",
+    image: "/images/projects/inventario.jpg",
+    stack: ["Docker", "Python", "PostgreSQL"],
+    github: "#",
     demo: "#",
   },
   {
-    title: "Sistema de Gestão",
+    title: "Monitoramento Bancário",
     description:
-      "Dashboard para gerenciamento de dados, usuários e operações com API REST e banco de dados.",
-    stack: ["React", "Node.js", "Express", "Prisma"],
-    type: "Full Stack",
-    github: "https://github.com/",
+      "Automação para extração, organização e análise de despesas bancárias com integração entre serviços.",
+    image: "/images/projects/bancario.jpg",
+    stack: ["Python", "Gmail API", "Arquitetura"],
+    github: "#",
     demo: "#",
   },
   {
-    title: "API REST",
+    title: "Automação de Rotinas Corporativas",
     description:
-      "API estruturada com autenticação, validação de dados e persistência em banco relacional.",
-    stack: ["Node.js", "Express", "JWT", "PostgreSQL"],
-    type: "Backend",
-    github: "https://github.com/",
+      "Fluxos automatizados para reduzir tarefas repetitivas e melhorar a eficiência de processos internos.",
+    image: "/images/projects/automacao.jpg",
+    stack: ["Power Automate", "RPA"],
+    github: "#",
     demo: "#",
   },
 ];
@@ -35,59 +35,56 @@ export function Projects() {
     <section className="projects section" id="projects">
       <div className="container">
         <div className="projects__heading">
-          <span className="projects__eyebrow">Projetos</span>
+          <span className="projects__eyebrow">PORTFÓLIO</span>
 
           <h2 className="projects__title">
-            Projetos que demonstram minhas habilidades na prática.
+            PROJETOS
           </h2>
 
           <p className="projects__description">
-            Alguns projetos desenvolvidos para praticar arquitetura,
-            desenvolvimento frontend, backend e integração com banco de dados.
+            Soluções desenvolvidas para resolver problemas reais com foco em
+            automação, organização de dados e aplicações escaláveis.
           </p>
         </div>
 
         <div className="projects__grid">
           {projects.map((project) => (
             <article className="project-card" key={project.title}>
-              <div className="project-card__top">
-                <span className="project-card__type">
-                  {project.type}
-                </span>
-
-                <span className="project-card__number">
-                  0{projects.indexOf(project) + 1}
-                </span>
+              <div className="project-card__image">
+                <img
+                  src={project.image}
+                  alt={`Preview do projeto ${project.title}`}
+                />
               </div>
 
-              <h3>{project.title}</h3>
+              <div className="project-card__content">
+                <h3>{project.title}</h3>
 
-              <p className="project-card__description">
-                {project.description}
-              </p>
+                <p>{project.description}</p>
 
-              <ul className="project-card__stack">
-                {project.stack.map((technology) => (
-                  <li key={technology}>{technology}</li>
-                ))}
-              </ul>
+                <ul className="project-card__stack">
+                  {project.stack.map((technology) => (
+                    <li key={technology}>{technology}</li>
+                  ))}
+                </ul>
 
-              <div className="project-card__actions">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
+                <div className="project-card__actions">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
 
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Demo
-                </a>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Ver projeto
+                  </a>
+                </div>
               </div>
             </article>
           ))}
