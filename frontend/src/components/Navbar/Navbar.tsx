@@ -57,6 +57,12 @@ export function Navbar() {
             </li>
 
             <li>
+              <a href="#about" onClick={closeMenu}>
+                Sobre
+              </a>
+            </li>
+
+            <li>
               <a href="#projects" onClick={closeMenu}>
                 Projetos
               </a>
@@ -65,12 +71,6 @@ export function Navbar() {
             <li>
               <a href="#skills" onClick={closeMenu}>
                 Habilidades
-              </a>
-            </li>
-
-            <li>
-              <a href="#about" onClick={closeMenu}>
-                Sobre
               </a>
             </li>
 

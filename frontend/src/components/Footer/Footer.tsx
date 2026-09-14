@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer__content">
         <p className="footer__copyright">
-          © {currentYear} JOÃO GABRIEL | DESENVOLVIDO EM GOTHAM.
+          © {currentYear} João Gabriel. Todos os direitos reservados.
         </p>
 
         <div className="footer__links">

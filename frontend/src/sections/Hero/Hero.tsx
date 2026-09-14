@@ -7,9 +7,7 @@ export function Hero() {
 
       <div className="container hero__content">
         <div className="hero__text">
-          <span className="hero__eyebrow">
-            CRIANDO SOLUÇÕES ROBUSTAS.
-          </span>
+          
 
           <h1 className="hero__title">
             <span>JOÃO GABRIEL.</span>
