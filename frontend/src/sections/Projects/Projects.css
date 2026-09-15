@@ -6,9 +6,7 @@
 
 .projects__heading {
   max-width: 720px;
-
-  margin: 0 auto 4rem;
-
+  margin: 0 auto 3rem;
   text-align: center;
 }
 
@@ -120,7 +118,7 @@
 .project-card__image {
   position: relative;
 
-  height: 215px;
+  height:  230px;
 
   overflow: hidden;
 
@@ -251,7 +249,7 @@
   margin-bottom: 0.65rem;
 
   color:
-    rgba(245, 166, 35, 0.55);
+   rgba(245, 166, 35, 0.7);
 
   font-family: var(--font-heading);
 
@@ -272,8 +270,8 @@
   transition: color 0.25s ease;
 }
 
-.project-card:hover
-  .project-card__content h3 {
+.project-card:hover .project-card__content h3,
+.project-card:focus-within .project-card__content h3 {
   color: var(--color-accent);
 }
 
@@ -282,7 +280,7 @@
 
   margin-bottom: 1.4rem;
 
-  color: var(--color-text-secondary);
+   color: #aeb2b9;
 
   font-size: 0.93rem;
   line-height: 1.7;

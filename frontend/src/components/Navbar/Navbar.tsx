@@ -1,21 +1,57 @@
 import { useEffect, useState } from "react";
+
 import "./Navbar.css";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     function handleScroll() {
-      setIsScrolled(window.scrollY > 24);
+      const currentScrollY = window.scrollY;
+
+      // Na Home / topo do site, a navbar fica sempre visível
+      if (currentScrollY <= 120) {
+        setIsVisible(true);
+        setLastScrollY(currentScrollY);
+        return;
+      }
+
+      // Scroll para baixo: esconde
+      if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+        setIsOpen(false);
+      }
+
+      // Scroll para cima: mostra
+      if (currentScrollY < lastScrollY) {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
     }
 
-    window.addEventListener("scroll", handleScroll);
-
-    handleScroll();
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    function handleEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    }
+
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
     };
   }, []);
 
@@ -25,7 +61,9 @@ export function Navbar() {
 
   return (
     <header
-      className={`navbar ${isScrolled ? "navbar--scrolled" : ""}`}
+      className={`navbar ${
+        isVisible ? "navbar--visible" : "navbar--hidden"
+      }`}
     >
       <div className="container navbar__content">
         <a
@@ -34,9 +72,13 @@ export function Navbar() {
           onClick={closeMenu}
           aria-label="Ir para o início"
         >
-          <span className="navbar__brand-name">JOÃO</span>
+          <span className="navbar__brand-name">
+            JOÃO
+          </span>
 
-          <span className="navbar__brand-separator">|</span>
+          <span className="navbar__brand-separator">
+            |
+          </span>
 
           <span className="navbar__brand-role">
             FULL STACK DEVELOPER
@@ -44,6 +86,7 @@ export function Navbar() {
         </a>
 
         <nav
+          id="primary-navigation"
           className={`navbar__nav ${
             isOpen ? "navbar__nav--open" : ""
           }`}
@@ -63,7 +106,19 @@ export function Navbar() {
             </li>
 
             <li>
-              <a href="#projects" onClick={closeMenu}>
+              <a
+                href="#experience"
+                onClick={closeMenu}
+              >
+                Experiência
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#projects"
+                onClick={closeMenu}
+              >
                 Projetos
               </a>
             </li>
@@ -75,7 +130,10 @@ export function Navbar() {
             </li>
 
             <li>
-              <a href="#contact" onClick={closeMenu}>
+              <a
+                href="#contact"
+                onClick={closeMenu}
+              >
                 Contato
               </a>
             </li>
@@ -93,11 +151,20 @@ export function Navbar() {
         <button
           type="button"
           className={`navbar__toggle ${
-            isOpen ? "navbar__toggle--open" : ""
+            isOpen
+              ? "navbar__toggle--open"
+              : ""
           }`}
-          onClick={() => setIsOpen((current) => !current)}
-          aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+          onClick={() =>
+            setIsOpen((current) => !current)
+          }
+          aria-label={
+            isOpen
+              ? "Fechar menu"
+              : "Abrir menu"
+          }
           aria-expanded={isOpen}
+          aria-controls="primary-navigation"
         >
           <span />
           <span />

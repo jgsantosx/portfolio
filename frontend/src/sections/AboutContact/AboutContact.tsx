@@ -36,6 +36,7 @@ export function AboutContact() {
                   type="text"
                   placeholder="Seu nome"
                   autoComplete="name"
+                  required
                 />
               </div>
 
@@ -50,6 +51,7 @@ export function AboutContact() {
                   type="email"
                   placeholder="seuemail@exemplo.com"
                   autoComplete="email"
+                  required
                 />
               </div>
 
@@ -63,6 +65,7 @@ export function AboutContact() {
                   name="message"
                   rows={6}
                   placeholder="Escreva sua mensagem"
+                  required
                 />
               </div>
 

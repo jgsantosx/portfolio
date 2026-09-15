@@ -7,6 +7,7 @@
 :root {
   --color-background: #050505;
   --color-background-deep: #000000;
+
   --color-surface: #111418;
   --color-surface-light: #161b22;
 
@@ -59,12 +60,16 @@ main {
   background: var(--color-background);
 }
 
+/* ELEMENTOS DE FORMULÁRIO */
+
 body,
 button,
 input,
 textarea {
   font: inherit;
 }
+
+/* TIPOGRAFIA */
 
 h1,
 h2,
@@ -113,7 +118,7 @@ ul {
   margin-inline: auto;
 }
 
-/* ESPAÇAMENTO GLOBAL DAS SEÇÕES */
+/* SEÇÕES */
 
 .section {
   padding: 6rem 0;
@@ -122,8 +127,20 @@ ul {
 }
 
 /*
-  Evita que as seções comuns criem
-  separações visuais entre si.
+  Como a Navbar é fixa, impede que o título
+  das seções fique escondido ao navegar
+  pelos links #about, #projects, etc.
+*/
+
+section[id] {
+  scroll-margin-top: calc(
+    var(--navbar-height) + 1.5rem
+  );
+}
+
+/*
+  Mantém o fundo contínuo depois do Hero
+  e evita linhas entre as seções.
 */
 
 main > section:not(.hero) {
@@ -153,7 +170,7 @@ main > section:not(.hero) {
   background: var(--color-accent);
 }
 
-/* SELEÇÃO */
+/* SELEÇÃO DE TEXTO */
 
 ::selection {
   background: var(--color-accent);
@@ -161,7 +178,7 @@ main > section:not(.hero) {
   color: #050505;
 }
 
-/* ACESSIBILIDADE */
+/* ACESSIBILIDADE - FOCO */
 
 :focus-visible {
   outline: 2px solid var(--color-accent);
@@ -190,5 +207,13 @@ main > section:not(.hero) {
 
   .section {
     padding: 3.5rem 0;
+  }
+}
+
+/* MOVIMENTO REDUZIDO */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

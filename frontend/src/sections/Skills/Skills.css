@@ -6,9 +6,7 @@
 
 .skills__heading {
   max-width: 720px;
-
-  margin: 0 auto 3rem;
-
+  margin: 0 auto 2.5rem;
   text-align: center;
 }
 
@@ -30,7 +28,8 @@
 
   color: var(--color-text-primary);
 
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 4.4vw, 3.6rem);
+
   font-weight: 700;
 
   letter-spacing: 0.04em;
@@ -149,14 +148,14 @@
 .skills__counter {
   margin-bottom: 2rem;
 
-  color:
-    rgba(156, 163, 175, 0.55);
+  color: rgba(156, 163, 175, 0.7);
 
   font-size: 0.72rem;
 
   text-align: center;
 
   text-transform: uppercase;
+
   letter-spacing: 0.1em;
 }
 
@@ -181,7 +180,7 @@
 
   position: relative;
 
-  min-height: 155px;
+  min-height: 145px;
 
   overflow: hidden;
 
@@ -223,7 +222,7 @@
 }
 
 .skill-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 
   border-color:
     rgba(245, 166, 35, 0.65);
@@ -365,7 +364,7 @@
 
   z-index: 1;
 
-  color: var(--color-text-secondary);
+  color: #aeb2b9;
 
   font-family: var(--font-body);
 

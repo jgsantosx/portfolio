@@ -63,7 +63,7 @@ const skills: Skill[] = [
   name: "Django",
   category: "backend",
   icon: "devicon-django-plain",
-  color: "#092E20",
+  color: "#44B78B",
 },
 {
   name: "Java",

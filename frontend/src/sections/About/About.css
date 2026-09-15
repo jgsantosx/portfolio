@@ -1,6 +1,9 @@
 .about {
   position: relative;
 
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+
   background: transparent;
 }
 
@@ -81,7 +84,7 @@
 
   gap: 2rem;
 
-  min-height: 290px;
+  min-height: 270px;
 
   background:
     linear-gradient(
@@ -320,8 +323,20 @@
     background 0.2s ease;
 }
 
-.about-card__button:hover {
+.about-card__button:hover,
+.about-card__button:focus-visible {
   transform: translateY(-2px);
+}
+
+.about-card__button--primary:hover,
+.about-card__button--primary:focus-visible {
+  background: var(--color-accent-hover);
+}
+
+.about-card__button--secondary:hover,
+.about-card__button--secondary:focus-visible {
+  border-color: rgba(245, 166, 35, 0.55);
+  color: var(--color-accent);
 }
 
 .about-card__button--primary {
@@ -382,7 +397,7 @@
   flex-direction: column;
   justify-content: center;
 
-  min-height: 290px;
+  min-height: 270px;;
 }
 
 .about-card--bio h3,
@@ -396,7 +411,7 @@
 }
 
 .about-card--bio p {
-  color: var(--color-text-secondary);
+  color: #aeb2b9;
 
   font-size: 0.9rem;
   line-height: 1.75;
@@ -410,6 +425,9 @@
 
 .about-card--focus {
   grid-column: span 3;
+
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 
   background:
     radial-gradient(
@@ -434,7 +452,7 @@
 
   gap: 1rem;
 
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .about-card__focus-header h3 {
@@ -486,18 +504,16 @@
     background 0.25s ease;
 }
 
-.about-card__technology:hover {
+.about-card__technology:hover,
+.about-card__technology:focus-within {
   transform: translateY(-3px);
 
-  border-color:
-    rgba(245, 166, 35, 0.4);
+  border-color: rgba(245, 166, 35, 0.4);
 
-  background:
-    rgba(245, 166, 35, 0.05);
+  background: rgba(245, 166, 35, 0.05);
 
   color: var(--color-text-primary);
 }
-
 .about-card__technology i {
 
 
@@ -563,8 +579,8 @@
   }
 
   .about-card__photo {
-    width: 135px;
-    height: 135px;
+    width: 165px;
+    height: 165px;
   }
 
   .about-card__decor {

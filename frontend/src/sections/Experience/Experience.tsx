@@ -1,6 +1,5 @@
 import "./Experience.css";
 
-
 const experiences = [
   {
     id: 1,
@@ -15,7 +14,7 @@ const experiences = [
   {
     id: 2,
     period: "2025 — 2026",
-    role: "Estagiário de Ti",
+    role: "Estagiário de TI",
     company: "Lions Club",
     current: false,
     description:
@@ -35,17 +34,16 @@ const education = [
       "Formação voltada para desenvolvimento de software, banco de dados, engenharia de sistemas e construção de aplicações.",
     icon: "🎓",
   },
-{
+  {
     id: 2,
     period: "2016 — 2019",
-    course: "Técnico em Desenvolvimento Web ",
+    course: "Técnico em Desenvolvimento Web",
     institution: "Colégio Santo Inácio",
     status: "Concluído",
     description:
       "Formação técnica voltada ao desenvolvimento de aplicações web, com conhecimentos em PHP, Laravel, SQL, HTML, CSS e JavaScript. Durante o curso, também foram abordados fundamentos de redes de computadores, arquitetura de computadores, banco de dados e conceitos relacionados ao desenvolvimento e funcionamento de sistemas.",
     icon: "🎓",
   },
-
 ];
 
 export function Experience() {
@@ -79,12 +77,18 @@ export function Experience() {
                   className="timeline__item"
                   key={item.id}
                 >
-                  <span className="timeline__node" />
+                  <span
+                    className="timeline__node"
+                    aria-hidden="true"
+                  />
 
                   <div className="timeline__card">
                     <div className="timeline__top">
                       <div className="timeline__identity">
-                        <div className="timeline__icon">
+                        <div
+                          className="timeline__icon"
+                          aria-hidden="true"
+                        >
                           {item.icon}
                         </div>
 
@@ -106,7 +110,11 @@ export function Experience() {
 
                         {item.current && (
                           <span className="timeline__current">
-                            <span className="timeline__pulse" />
+                            <span
+                              className="timeline__pulse"
+                              aria-hidden="true"
+                            />
+
                             Atual
                           </span>
                         )}
@@ -133,12 +141,18 @@ export function Experience() {
                   className="timeline__item"
                   key={item.id}
                 >
-                  <span className="timeline__node" />
+                  <span
+                    className="timeline__node"
+                    aria-hidden="true"
+                  />
 
                   <div className="timeline__card">
                     <div className="timeline__top">
                       <div className="timeline__identity">
-                        <div className="timeline__icon">
+                        <div
+                          className="timeline__icon"
+                          aria-hidden="true"
+                        >
                           {item.icon}
                         </div>
 
