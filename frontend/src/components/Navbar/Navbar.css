@@ -18,10 +18,12 @@
   transform: translateY(0);
 
   transition:
-    transform 0.3s ease,
+    /*transform 0.3s ease,  //Navbar hide/show on scroll - desativado por enquanto*/
     background 0.3s ease,
     border-color 0.3s ease;
 }
+
+/* Navbar hide/show on scroll - desativado por enquanto
 
 .navbar--visible {
   transform: translateY(0);
@@ -30,7 +32,7 @@
 .navbar--hidden {
   transform: translateY(-100%);
 }
-
+*/
 
 .navbar__content {
   height: 100%;
@@ -202,7 +204,7 @@
     opacity 0.25s ease;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 375px) {
   .navbar__brand-role,
   .navbar__brand-separator {
     display: none;
