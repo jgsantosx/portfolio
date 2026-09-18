@@ -87,3 +87,169 @@ portfolio/
 ├── .gitignore
 ├── docker-compose.yml
 └── README.md
+```
+
+---
+
+## Executando localmente
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/jgsantosx/portfolio.git
+```
+
+### 2. Entre na pasta do frontend
+
+```bash
+cd portfolio/frontend
+```
+
+### 3. Instale as dependências
+
+```bash
+npm install
+```
+
+### 4. Inicie o ambiente de desenvolvimento
+
+```bash
+npm run dev
+```
+
+O Vite disponibilizará a aplicação localmente, normalmente em:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## Build de produção
+
+Para gerar a versão otimizada para produção:
+
+```bash
+npm run build
+```
+
+Os arquivos finais serão gerados em:
+
+```text
+frontend/dist/
+```
+
+Para testar a build de produção localmente:
+
+```bash
+npm run preview
+```
+
+---
+
+## Performance
+
+A versão de produção foi analisada com o Google Lighthouse.
+
+| Categoria | Resultado |
+|---|---:|
+| Performance | 100 |
+| Accessibility | 96 |
+| Best Practices | 100 |
+| SEO | 92 |
+
+---
+
+## Deploy
+
+O frontend está publicado na Hostinger.
+
+### Portfólio online
+
+**https://portfoliojoao.forgedevapps.com/**
+
+O processo atual de deploy consiste em gerar a build de produção:
+
+```bash
+npm run build
+```
+
+E publicar o conteúdo da pasta:
+
+```text
+frontend/dist/
+```
+
+no servidor web.
+
+---
+
+## Backend
+
+O backend será desenvolvido em uma etapa futura do projeto.
+
+### Stack planejada
+
+<p>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=flat-square&logo=intellijidea&logoColor=white" />
+</p>
+
+A integração será adicionada posteriormente sem alterar a estrutura visual atual do frontend.
+
+---
+
+## Próximas evoluções
+
+- Integração do formulário de contato
+- Backend com Java e Spring Boot
+- Integração com PostgreSQL
+- Persistência de dados
+- Novos projetos
+- Melhorias contínuas de SEO
+- Novas funcionalidades
+
+---
+
+## Preview
+
+Uma captura do projeto pode ser adicionada ao repositório em:
+
+```text
+frontend/public/images/readme/portfolio-preview.png
+```
+
+Depois, esta imagem pode ser exibida no README usando:
+
+```html
+<p align="center">
+  <img
+    src="./frontend/public/images/readme/portfolio-preview.png"
+    alt="Preview do portfólio de João Gabriel"
+    width="100%"
+  />
+</p>
+```
+
+---
+
+## Contato
+
+**João Gabriel**
+
+GitHub:  
+https://github.com/jgsantosx
+
+LinkedIn:  
+https://www.linkedin.com/in/jgsantosx/
+
+Portfólio:  
+https://portfoliojoao.forgedevapps.com/
+
+---
+
+<p align="center">
+  Desenvolvido por João Gabriel.
+</p>
