@@ -184,35 +184,6 @@ no servidor web.
 
 ---
 
-## Backend
-
-O backend será desenvolvido em uma etapa futura do projeto.
-
-### Stack planejada
-
-<p>
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
-  <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=flat-square&logo=intellijidea&logoColor=white" />
-</p>
-
-A integração será adicionada posteriormente sem alterar a estrutura visual atual do frontend.
-
----
-
-## Próximas evoluções
-
-- Integração do formulário de contato
-- Backend com Java e Spring Boot
-- Integração com PostgreSQL
-- Persistência de dados
-- Novos projetos
-- Melhorias contínuas de SEO
-- Novas funcionalidades
-
----
-
 ## Preview
 
 Uma captura do projeto pode ser adicionada ao repositório em:
